@@ -6,7 +6,7 @@ from os.path import isfile,join
 file_path = "userSamples/samples/"
 data_set = [ f for f in listdir(file_path) if isfile(join(file_path,f))]
 
-print(data_set)
+# print(data_set)
 
 training_data = []
 labels = []
@@ -61,19 +61,20 @@ while True:
             confidence_msg = str(confidence)+"% correctness confidence"
         
         #display confidence on webcam
-        cv2.putText(image,confidence_msg,(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
+        cv2.putText(image,confidence_msg,(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
 
         if confidence>75:
             cv2.putText(image,"System Unlocked",(150,450),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),3)
             cv2.imshow("Face cropper",image)
         else:
-            cv2.putText(image,"System Locked",(150,450),cv2.FONT_HERSHEY_COMPLEX,1,(255,0,0),3)
+            cv2.putText(image,"System Locked",(150,450),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),3)
             cv2.imshow("Face cropper",image)
 
 
     #no face found
     except:
         cv2.putText(image,"Face not found in frame",(150,350),cv2.FONT_HERSHEY_COMPLEX,1,(255,0,0),3)
+        cv2.putText(image,"System Locked",(150,450),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),3)
         cv2.imshow("Face cropper",image)
         pass
 

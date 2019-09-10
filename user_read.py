@@ -41,7 +41,7 @@ while True:
         filePath = "userSamples/samples/user"+str(count)+".jpg"
         cv2.imwrite(filePath,face)
 
-        cv2.putText(face,str(count),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
+        cv2.putText(face,str(count),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(255,0,0),2)
         cv2.imshow("Face Cropper",face)
 
     else:
