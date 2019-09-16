@@ -1,10 +1,10 @@
 ## **Face Unlock System Using OpenCV**
 
 ### Usage
- - Execute the `train.py` python script. It will then open the webcam and
+ - Execute the `user_read.py` python script. It will then open the webcam and
    take 100 sample photos of face being detected in the webcam. Press
    Enter to abort the Process.
- - After collecting the samples, `user_read.py` can be executes. It trains
+ - After collecting the samples, `train.py` can be executes. It trains
    the program with the collected samples to detect the given face. A
    webcam feed is then opened after training.
  - The program then unlocks the system in face matches with more than
