@@ -63,7 +63,7 @@ while True:
         #display confidence on webcam
         cv2.putText(image,confidence_msg,(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
 
-        if confidence>75:
+        if confidence>80:
             cv2.putText(image,"System Unlocked",(150,450),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),3)
             cv2.imshow("Face cropper",image)
         else:
